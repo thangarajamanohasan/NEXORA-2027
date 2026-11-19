@@ -13,14 +13,11 @@ import {
   Network,
   Sparkles,
   Laptop,
-  Globe2,
   Target,
-  Rocket,
   Building2,
   UserRound,
   Ticket,
   CheckCircle2,
-  ChevronDown,
 } from "lucide-react";
 
 const eventDate = new Date("2027-01-19T09:00:00+05:30").getTime();

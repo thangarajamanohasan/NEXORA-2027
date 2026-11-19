@@ -10,7 +10,6 @@ import {
   CalendarDays,
   MapPin,
   LockKeyhole,
-  CheckCircle2,
 } from "lucide-react";
 import { supabase } from "./lib/supabase";
 

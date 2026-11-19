@@ -37,7 +37,7 @@ export default function App() {
     [reg, setReg] = useState<Reg | null>(null),
     [rows, setRows] = useState<Reg[]>([]),
     [summary, setSummary] = useState<Summary | null>(null);
-  const [mode, setMode] = useState<"login" | "register">("login"),
+  const [, setMode] = useState<"login" | "register">("login"),
     [busy, setBusy] = useState(false),
     [error, setError] = useState(""),
     [notice, setNotice] = useState("");
@@ -193,6 +193,14 @@ export default function App() {
       password: "",
       confirm: "",
     });
+    if (!data.user) {
+      setError(
+        "Account created, but user information is unavailable. Please log in.",
+      );
+      setBusy(false);
+      return;
+    }
+
     await load(data.user.id);
     setBusy(false);
   }
